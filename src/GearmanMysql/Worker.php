@@ -21,6 +21,8 @@ class Worker {
     error_log( "Attempting to run job from GearmanMysql");
     $jq = new Queue("runnable");
     $job_to_run = $jq->first();
+    error_log( var_export($job_to_run));
+    
     if(!$job_to_run) return false;
     
     $job_to_run->lock = 0;
