@@ -16,6 +16,8 @@ class Worker {
     
   
   public function run() {
+    print_r($this);
+    return true;
     $jq = new Queue("runnable");
     $job_to_run = $jq->first();
     
@@ -35,6 +37,7 @@ class Worker {
       $job->lock = 0;
       $job->save(); 
     }
+    return $result;
     
   }
   
