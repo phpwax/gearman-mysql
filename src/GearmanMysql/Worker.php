@@ -20,7 +20,7 @@ class Worker {
   public function run() {
     error_log( "Attempting to run job from GearmanMysql");
     $jq = new Queue("runnable");
-    error_log( var_export($jq));
+    error_log( var_export($jq) );
     $job_to_run = $jq->first();
     
     if(!$job_to_run) return false;
