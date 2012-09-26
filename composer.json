@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4",
     },
     "autoload": {
-        "psr-0": { "Wax": "src/" }
+        "psr-0": { "GearmanMysql": "src/" }
     },
     "minimum-stability": "dev",
     
