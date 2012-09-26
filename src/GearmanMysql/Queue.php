@@ -3,7 +3,7 @@ namespace Wax\GearmanMysql;
 
 /* New Model */
 
-class Queue extends WaxModel {
+class Queue extends \WaxModel {
   
   public function setup() {
     $this->define("model", "CharField", array());
