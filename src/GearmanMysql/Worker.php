@@ -18,6 +18,7 @@ class Worker {
     
   
   public function run() {
+    echo "Attempting to run job from GearmanMysql";
     $jq = new Queue("runnable");
     $job_to_run = $jq->first();
     if(!$job_to_run) return false;
