@@ -1,0 +1,22 @@
+{
+    "name": "phpwax/gearman-mysql",
+    "type": "library",
+    "description": "Persistent Gearman Queue Manager",
+    "keywords": ["gearman", "php", "mysql"],
+    "homepage": "http://php-wax.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "ross@oneblackbear.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+    },
+    "autoload": {
+        "psr-0": { "Wax": "src/" }
+    },
+    "minimum-stability": "dev",
+    
+}
