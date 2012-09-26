@@ -5,6 +5,8 @@ namespace GearmanMysql;
 
 class Queue extends \WaxModel {
   
+  public $table = "gearman_queue";
+  
   public function setup() {
     $this->define("model", "CharField", array());
     $this->define("method", "CharField", array());
