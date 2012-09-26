@@ -14,7 +14,7 @@ namespace GearmanMysql;
 
 class Worker {
   
-  $logger = false;
+  public $logger = false;
     
   
   public function run() {
