@@ -13,30 +13,32 @@ namespace GearmanMysql;
  
 
 class Worker {
+  
+  $logger = false;
     
   
   public function run() {
-    print_r($this);
-    return true;
     $jq = new Queue("runnable");
     $job_to_run = $jq->first();
+    if(!$job_to_run) return false;
     
     $job_to_run->lock = 0;
-    $job->save();
+    $job_to_run->save();
       
-    $commands = array($job->model, $job->method);
-    $result = call_user_func_array($commands, unserialize($job->data));
+    $commands = array($job_to_run->model, $job_to_run->method);
+    $result = call_user_func_array($commands, unserialize($job_to_run->data));
     if($result !== FALSE) {
-      $job->run_completed = date('Y-m-d H:i:s');
-      $job->result = $result;
-      $job->status = 1;
-      $job->lock = 0;
-      $job->save();
+      $job_to_run->run_completed = date('Y-m-d H:i:s');
+      $job_to_run->result = $result;
+      $job_to_run->status = 1;
+      $job_to_run->lock = 0;
+      $job_to_run->save();
     } else {
-      $job->result = 0;
-      $job->lock = 0;
-      $job->save(); 
+      $job_to_run->result = 0;
+      $job_to_run->lock = 0;
+      $job_to_run->save(); 
     }
+    sleep(10);
     return $result;
     
   }
