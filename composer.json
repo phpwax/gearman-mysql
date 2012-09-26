@@ -1,7 +1,7 @@
 {
     "name": "phpwax/gearman-mysql",
     "type": "library",
-    "description": "Persistent Gearman Queue Manager",
+    "description": "Persistent Gearman Queue Manager for PHP-Wax",
     "keywords": ["gearman", "php", "mysql"],
     "homepage": "http://php-wax.com/",
     "license": "MIT",
