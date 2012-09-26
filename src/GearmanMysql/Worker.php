@@ -1,5 +1,5 @@
 <?php
-namespace Wax\GearmanMysql;
+namespace GearmanMysql;
 
 /**
  * Base GearmanMysql Worker class

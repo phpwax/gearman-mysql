@@ -1,5 +1,5 @@
 <?php
-namespace Wax\GearmanMysql;
+namespace GearmanMysql;
 
 /* New Model */
 
