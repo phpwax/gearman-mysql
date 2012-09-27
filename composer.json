@@ -13,6 +13,8 @@
     ],
     "require": {
         "php": ">=5.4",
+    },
+    "require-dev": {
         "phpwax/model": "1.0.*",
         "phpwax/db": "1.0.*"
     },
