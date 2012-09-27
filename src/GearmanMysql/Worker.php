@@ -1,5 +1,7 @@
 <?php
 namespace GearmanMysql;
+use Wax\Config\Config;
+use Wax\Model\Model;
 
 /**
  * Base GearmanMysql Worker class
@@ -20,8 +22,7 @@ class Worker {
   public function run() {
     error_log( "Attempting to run job from GearmanMysql");
     
-    WaxApplication::setup_environment();
-    if($db = Config::get('db')) WaxModel::load_adapter($db);
+    if($db = Config::get('db')) Model::load_adapter($db);
 
     $jq = new Queue("runnable");
     error_log( var_export($jq) );

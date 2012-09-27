@@ -1,9 +1,10 @@
 <?php
 namespace GearmanMysql;
+use Wax\Model\Model
 
 /* New Model */
 
-class Queue extends \WaxModel {
+class Queue extends Model {
   
   public $table = "gearman_queue";
   
