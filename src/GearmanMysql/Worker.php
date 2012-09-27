@@ -19,6 +19,8 @@ class Worker {
   
   public function run() {
     error_log( "Attempting to run job from GearmanMysql");
+    if($db = Config::get('db')) WaxModel::load_adapter($db);
+
     $jq = new Queue("runnable");
     error_log( var_export($jq) );
     $job_to_run = $jq->first();
