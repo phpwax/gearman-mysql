@@ -21,7 +21,7 @@ class Worker {
   
   public function run() {
     error_log( "Attempting to run job from GearmanMysql");
-    
+    Config::load("db.ini");
     if($db = Config::get('db')) Model::load_adapter($db);
 
     $jq = new Queue("runnable");
