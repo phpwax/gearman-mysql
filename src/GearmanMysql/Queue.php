@@ -1,6 +1,6 @@
 <?php
 namespace GearmanMysql;
-use Wax\Model\Model
+use Wax\Model\Model;
 
 /* New Model */
 
